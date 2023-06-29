@@ -155,7 +155,7 @@ resource "aws_security_group" "efs_sg" {
   }
 
   tags = {
-    Name = "clg-sg-app"
+    Name = "clg-sg-efs"
   }
 }
 

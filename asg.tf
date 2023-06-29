@@ -3,7 +3,7 @@
 # terraform aws launch template
 resource "aws_launch_template" "app_lt" {
   name          = "clg-launch-template"
-  image_id      = "ami-04c7a11ae33d06677"
+  image_id      = "ami-09f49599bf0b0b4f6"
   instance_type = "t2.micro"
   key_name      = "terraform_keys"
   description   = "Launch template for asg"
