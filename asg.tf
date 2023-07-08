@@ -3,7 +3,7 @@
 # terraform aws launch template
 resource "aws_launch_template" "app_lt" {
   name          = "clg-launch-template"
-  image_id      = "ami-09f49599bf0b0b4f6"
+  image_id      = "ami-0cc9e930880e94b7f"
   instance_type = "t2.micro"
   key_name      = "terraform_keys"
   description   = "Launch template for asg"
@@ -19,9 +19,9 @@ resource "aws_launch_template" "app_lt" {
 # terraform aws autoscaling group
 resource "aws_autoscaling_group" "asg" {
   vpc_zone_identifier = [aws_subnet.app_a.id, aws_subnet.app_b.id]
-  desired_capacity    = 0
-  max_size            = 0
-  min_size            = 0
+  desired_capacity    = 1
+  max_size            = 1
+  min_size            = 1
   name                = "clg-asg"
   health_check_type   = "ELB"
 
